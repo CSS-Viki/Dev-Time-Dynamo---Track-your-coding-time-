@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+body,
+input,
+button {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+.flex-item, main .timer-stamps .hour-stamp,
+main .timer-stamps .minute-stamp,
+main .timer-stamps .second-stamp, main .timer-stamps, main, .timer-stamps-design, main .timer-stamps .hour-stamp span,
+main .timer-stamps .minute-stamp span,
+main .timer-stamps .second-stamp span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-stamps-design, main .timer-stamps .hour-stamp span,
+main .timer-stamps .minute-stamp span,
+main .timer-stamps .second-stamp span {
+  background-color: hsl(236, 21%, 26%);
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 0px 0px hsl(234, 17%, 12%);
+  -webkit-box-shadow: 0px 10px 0px 0px hsl(234, 17%, 12%);
+  -moz-box-shadow: 0px 10px 0px 0px hsl(234, 17%, 12%);
+  font-size: 5rem;
+  font-weight: 700;
+  color: hsl(345, 95%, 68%);
+}
+
+.before-element, main .timer-stamps .hour-stamp span::before,
+main .timer-stamps .minute-stamp span::before,
+main .timer-stamps .second-stamp span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 55%;
+  background-color: hsl(234, 17%, 12%);
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  opacity: 0.3;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 2em;
+  background: linear-gradient(to bottom, hsl(234, 17%, 12%), hsl(236, 21%, 26%));
+}
+
+main {
+  gap: 50px;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+}
+main form input,
+main form button {
+  border: none;
+  outline: none;
+  padding: 1em;
+  font-size: clamp(0.9rem, 0.4545rem + 2.9091vw, 1.5rem);
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+main form button {
+  margin-block-start: 20px;
+}
+main form input {
+  margin-block-start: 50px;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield; /* Firefox */
+}
+main .tagline {
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: clamp(0.2rem, 0.4545rem + 2.9091vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+}
+main .timer-stamps {
+  flex-direction: row;
+  gap: 30px;
+}
+main .timer-stamps .hour-stamp,
+main .timer-stamps .minute-stamp,
+main .timer-stamps .second-stamp {
+  position: relative;
+  gap: 20px;
+}
+main .timer-stamps .hour-stamp div p,
+main .timer-stamps .minute-stamp div p,
+main .timer-stamps .second-stamp div p {
+  color: hsl(237, 18%, 59%);
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+
+@media (max-width: 40.625em) {
+  main form input,
+  main form button {
+    width: 100%;
+  }
+  main .timer-stamps {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
